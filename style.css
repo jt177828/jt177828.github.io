@@ -14,8 +14,13 @@ html {
     scroll-behavior: smooth;
 }
 
+h3 {
+    padding: 60px 20px 0px;
+}
+
 p {
-    color: rgb(85, 85, 85)
+    color: rgb(85, 85, 85);
+    padding: 20px 20px 0px;
 }
 
 /* TRANSITION */
@@ -65,6 +70,48 @@ a:hover {
     color: green;
 }
 
-.about {
-    padding: 0 20px;
-}
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .carousel-track-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    list-style: none;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
