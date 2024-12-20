@@ -12,106 +12,73 @@ body {
 
 html {
     scroll-behavior: smooth;
-}
-
-h3 {
-    padding: 60px 20px 0px;
+    background-color: rgb(222,s 222, 222);
 }
 
 p {
     color: rgb(85, 85, 85);
-    padding: 20px 20px 0px;
+    font-size: 50%;
+}
+
+h1, h2, h3, h4, h5 {
+    color: rgb(85, 85, 85);
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover {
+    color: rgb(104, 237, 113);
+    transition: all 2ms ease;
 }
 
 /* TRANSITION */
-a,
-.btn {
+a, .btn {
     transition: all 500ms ease;
 }
 
 /* NAV BAR */
-nav, .nav-links {
+nav, .nav-links, .external-links, .name {
     display: flex;
 }
 
 nav {
     justify-content: space-between;
     align-items: center;
-    height: 9vh;
-    background-color: black;
+    height: 6vh;
+    background-color: rgb(28, 28, 28);
     padding: 0 20px;
-    font-size: small;
+    position: fixed;
+    width: 98%;
 }
-
-.nav-links {
+.external-links, .nav-links {
     gap: 2rem;
     list-style: none;
-    font-size: 1rem;
 }
 
-a {
+a, .name{
     color: white;
     text-decoration:double;
     text-decoration-color: white;
 }
 
-a:hover {
-    color: green;
+a:hover, .name:hover {
+    color: rgb(104, 237, 113);
     transition: all 2ms ease;
 }
 
-.logo {
-    font-size: 1rem; 
-    color: white
+/* CONTENT */
+section {
+    padding-top: 4vh;
+    padding-left: 24vh;
+    padding-right: 24vh;
+    height: 48vh;
 }
 
-.logo:hover {
-    cursor: grab;
-    color: green;
+.home {
+    padding-top: 16vh;
+    font-size: 3rem;
+    color: #333;
 }
 
-.carousel {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .carousel-track-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-track {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .carousel-slide {
-    min-width: 100%;
-    list-style: none;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-  }
-  
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
+.projects-header {
+    font-size: 2.5rem;
+    padding-bottom: 8vh;
+}
