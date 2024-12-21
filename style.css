@@ -13,24 +13,34 @@ body {
 
 html {
     scroll-behavior: smooth;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(16, 16, 16);
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: rgb(222, 222, 222);
 }
 
-h1, h2, h3, h4, h5 {
-    color: rgb(85, 85, 85);
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: rgb(222, 222, 222);
 }
 
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover {
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+p:hover {
     color: rgb(104, 237, 113);
     transition: all 200ms ease;
 }
 
 /* transition */
-a, .btn {
+a,
+.btn {
     transition: all 500ms ease;
 }
 
@@ -39,17 +49,20 @@ a, .btn {
     position: fixed;
     top: 0;
     left: 0;
-    width: 170px;
+    width: 160px;
     height: 100vh;
-    background-color: rgb(28, 28, 28);
     display: flex;
     flex-direction: column;
     padding: 1.5rem 1.5rem;
     justify-content: space-between;
-    
-  }
+    border: 2px solid rgb(222, 222, 222);
+}
 
-.sidebar-links  {
+.sidebar:hover {
+    background-color: rgb(3, 3, 3);
+}
+
+.sidebar-links {
     word-spacing: 1.5rem;
     gap: 4rem;
     list-style: none;
@@ -60,7 +73,7 @@ a, .btn {
 }
 
 a {
-    color: white;
+    color: rgb(222, 222, 222);
     text-decoration: none;
     word-spacing: 2rem;
 }
@@ -72,9 +85,22 @@ a:hover {
 
 /* CONTENT */
 .container {
-    padding: 2rem;
+    padding: 1.5rem;
     margin-left: 170px;
-  }
+    height: 100vh;
+    border: 2px solid rgb(222, 222, 222);
+}
+
+.home {
+    font-size: 2rem;
+    align-items: center;
+    height: auto;
+    justify-content: baseline;
+}
+
+.about {
+    justify-content: baseline;
+}
 
 header {
     text-align: center;
@@ -86,10 +112,9 @@ header h1 {
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #777;
+    font-size: 1.2rem;
+    color: #777;
 }
-
 
 .project-card {
     background-color: #e2e2e2;
