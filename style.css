@@ -117,21 +117,17 @@ header p {
 }
 
 .project-card {
-    background-color: #e2e2e2;
-    width: auto;
+    width: 120rem;
     height: auto;
     overflow: hidden;
     text-align: center;
     padding: 1.5rem;
     transition: transform 0.3s ease;
+    align-items: self-end;
 }
 
 .project-card:hover {
-    background-color: rgb(242, 242, 242);
+    transform: scale(1.05);
+    background-color: rgb(12, 12, 12);
     transition: all 200ms ease;
-
-}
-
-.project-link {
-    color: rgb(28, 28, 28);
 }
