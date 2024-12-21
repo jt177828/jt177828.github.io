@@ -1,23 +1,23 @@
-/* GENERAL */
+/* general */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family:'IBM Plex Mono',sans-serif;
+    font-family: 'IBM Plex Mono', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-    background-color: rgb(222,s 222, 222);
+    background-color: rgb(245, 245, 245);
 }
 
 p {
     color: rgb(85, 85, 85);
-    font-size: 50%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -26,59 +26,87 @@ h1, h2, h3, h4, h5 {
 
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover {
     color: rgb(104, 237, 113);
-    transition: all 2ms ease;
+    transition: all 200ms ease;
 }
 
-/* TRANSITION */
+/* transition */
 a, .btn {
     transition: all 500ms ease;
 }
 
-/* NAV BAR */
-nav, .nav-links, .external-links, .name {
-    display: flex;
-}
-
-nav {
-    justify-content: space-between;
-    align-items: center;
-    height: 6vh;
-    background-color: rgb(28, 28, 28);
-    padding: 0 20px;
+/* sidebar */
+.sidebar {
     position: fixed;
-    width: 98%;
-}
-.external-links, .nav-links {
-    gap: 2rem;
+    top: 0;
+    left: 0;
+    width: 170px;
+    height: 100vh;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem;
+    justify-content: space-between;
+    
+  }
+
+.sidebar-links  {
+    word-spacing: 1.5rem;
+    gap: 4rem;
     list-style: none;
 }
 
-a, .name{
-    color: white;
-    text-decoration:double;
-    text-decoration-color: white;
+.sidebar-links-external {
+    list-style: none;
 }
 
-a:hover, .name:hover {
+a {
+    color: white;
+    text-decoration: none;
+    word-spacing: 2rem;
+}
+
+a:hover {
     color: rgb(104, 237, 113);
-    transition: all 2ms ease;
+    transition: all 200ms ease;
 }
 
 /* CONTENT */
-section {
-    padding-top: 4vh;
-    padding-left: 24vh;
-    padding-right: 24vh;
-    height: 48vh;
+.container {
+    padding: 2rem;
+    margin-left: 170px;
+  }
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.home {
-    padding-top: 16vh;
-    font-size: 3rem;
-    color: #333;
-}
-
-.projects-header {
+header h1 {
     font-size: 2.5rem;
-    padding-bottom: 8vh;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+
+.project-card {
+    background-color: #e2e2e2;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: rgb(242, 242, 242);
+    transition: all 200ms ease;
+
+}
+
+.project-link {
+    color: rgb(28, 28, 28);
 }
