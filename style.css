@@ -63,15 +63,18 @@ a,
     list-style: none;
 }
 
-a {
+a,
+.alert-text {
     color: rgb(222, 222, 222);
     text-decoration: none;
     word-spacing: 2rem;
 }
 
-a:hover {
+a:hover,
+.alert-text:hover {
     color: rgb(104, 237, 113);
     transition: all 200ms ease;
+    cursor: pointer;
 }
 
 /* CONTENT */
@@ -80,6 +83,18 @@ a:hover {
     margin-left: 170px;
     height: auto;
     overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .container p {
@@ -108,17 +123,6 @@ a:hover {
     font-size: 2rem;
     display: flex;
     align-items: baseline;
-}
-
-.contacts {
-    height: auto;
-    bottom: 0;
-    position: absolute;
-    padding: 0rem 0rem 1.5rem;
-}
-
-.contacts-list {
-    list-style: none;
 }
 
 header {
