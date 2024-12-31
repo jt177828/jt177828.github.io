@@ -24,7 +24,12 @@ p {
     line-height: 1.6;
 }
 
-h1,
+h1 {
+    background: linear-gradient(to right, #31dd90, #45fff5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h2,
 h3,
 h4,
@@ -164,6 +169,7 @@ a:hover,
 }
 
 /* Projects */
+
 .project-card {
     background-color: #0F0F11;
     border-radius: 2px;
@@ -179,7 +185,8 @@ a:hover,
     border-color: #ffffff;
 }
 
-.project-card h2 {
+.project-card h2,
+.project-card p {
     margin-bottom: 1rem;
 }
 
@@ -188,8 +195,4 @@ a:hover,
     font-weight: 500;
     margin-top: 1rem;
     display: inline-block;
-}
-
-.project-link:hover {
-    text-decoration: underline;
 }
