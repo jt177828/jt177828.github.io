@@ -1,3 +1,3 @@
 ## Portfolio Website
 
-[justin-tian.vercel.app/](https://justin-tian.vercel.app/)
+[justin-tian.vercel.app/](https://justin-tian.vercel.app/){:target="_blank"}
