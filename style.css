@@ -89,6 +89,29 @@ a:hover,
     cursor: pointer;
 }
 
+/* Styling for the copied notification */
+.copy-notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #31dd90;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    z-index: 999;
+}
+
+/* Show the notification with a smooth fade-in */
+.copy-notification.show {
+    opacity: 1;
+}
+
 /* Main container */
 .container {
     margin-left: 280px;
