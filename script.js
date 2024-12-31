@@ -2,6 +2,7 @@ function showAlert() {
     alert("justin.tian.372@gmail.com");
 }
 
+/*
 function copyLink() {
     const tempInput = document.createElement("input");
     document.body.appendChild(tempInput);
@@ -19,6 +20,7 @@ function copyLink() {
         notification.style.display = "none";
     }, 2000);
 }
+*/
 
 window.onload = function () {
     const text = "Hello,";
