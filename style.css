@@ -46,7 +46,7 @@ h5 {
     width: 120px;
     height: 100vh;
     background-color: #0F0F11;
-    border-right: 1px solid #232125;
+    border-right: 2px solid #232125;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -89,34 +89,10 @@ a:hover,
     cursor: pointer;
 }
 
-/* Styling for the copied notification */
-.copy-notification {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #31dd90;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-    z-index: 999;
-}
-
-/* Show the notification with a smooth fade-in */
-.copy-notification.show {
-    opacity: 1;
-}
-
 /* Main container */
 .container {
-    margin-left: 280px;
-    padding: 2rem 3rem;
-    max-width: 1200px;
+    margin-left: 120px;
+    padding: 2rem 4rem;
     animation: fadeIn 0.3s ease-out;
 }
 
@@ -135,7 +111,6 @@ a:hover,
 /* Home */
 .home {
     max-width: 900px;
-    padding-top: 3rem;
 }
 
 .about h2 {
@@ -189,6 +164,35 @@ a:hover,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 2ms;
+}
+
+/* Tooltips for tech stack */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    font-size: smaller;
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: -100%;
+    /* Position above the hovered element */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Projects */
