@@ -54,3 +54,37 @@ window.onload = function () {
     }
     typing();
 }
+
+const getTheme = () => {
+    return localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+};
+
+// Apply theme to document
+const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updateButtonText(theme);
+};
+
+// Update button text based on current theme
+const updateButtonText = (theme) => {
+    const buttonText = document.querySelector('.button-text');
+    buttonText.textContent = `Switch to ${theme === 'light' ? 'Dark' : 'Light'} Theme`;
+};
+
+// Initialize theme
+applyTheme(getTheme());
+
+// Add click handler to theme switch button
+document.querySelector('.theme-switch').addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+});
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', (e) => {
+        applyTheme(e.matches ? 'dark' : 'light');
+    });

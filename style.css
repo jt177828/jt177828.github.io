@@ -60,7 +60,7 @@ h5 {
 
 .sidebar-links li,
 .sidebar-links-external li {
-    margin-bottom: 1rem;
+    margin-bottom: rem;
 }
 
 .sidebar-links-external {
@@ -139,6 +139,12 @@ a:hover,
     margin: 1.5rem 0;
     border: 1px solid #333333;
     width: auto;
+}
+
+.stack-container:hover {
+    transform: scale(1.02);
+    border-color: #ffffff;
+    transition: 300ms;
 }
 
 .stack-container p {
